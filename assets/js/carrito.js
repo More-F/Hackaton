@@ -4,6 +4,7 @@ const botonesAgregar = document.querySelectorAll('.agregar-carrito')
 const botonVaciar = document.getElementById('vaciar-carrito')
 const contador = document.getElementById('contador')
 const listaCarrito = document.getElementById('lista-carrito')
+const iconoCarrito = document.getElementById('icono-carrito')
 
 function actualizarCarrito() {
   localStorage.setItem('carrito', JSON.stringify(carrito))
@@ -41,9 +42,30 @@ function actualizarCarrito() {
 
 for (let i = 0; i < botonesAgregar.length; i++) {
   botonesAgregar[i].addEventListener('click', function () {
-    let id = this.getAttribute('data-id')
-    let nombre = this.getAttribute('data-nombre')
-    let precio = parseFloat(this.getAttribute('data-precio'))
+    let boton = this
+    let rectBoton = boton.getBoundingClientRect()
+    let rectCarrito = iconoCarrito.getBoundingClientRect()
+
+    let imagenAnimada = document.createElement('div')
+    imagenAnimada.classList.add('fly-img')
+    imagenAnimada.style.left = rectBoton.left + 'px'
+    imagenAnimada.style.top = rectBoton.top + 'px'
+    document.body.appendChild(imagenAnimada)
+
+    let deltaX = rectCarrito.left - rectBoton.left
+    let deltaY = rectCarrito.top - rectBoton.top
+
+    requestAnimationFrame(() => {
+      imagenAnimada.style.transform = 'translate3d(' + deltaX + 'px,' + deltaY + 'px, 0) scale(0.2)'
+    })
+
+    setTimeout(function () {
+      imagenAnimada.remove()
+    }, 600)
+
+    let id = boton.getAttribute('data-id')
+    let nombre = boton.getAttribute('data-nombre')
+    let precio = parseFloat(boton.getAttribute('data-precio'))
 
     let existe = false
 
