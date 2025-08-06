@@ -22,6 +22,19 @@ function actualizarCarrito() {
 
     let item = document.createElement('li')
     item.textContent = producto.cantidad + ' x ' + producto.nombre + ' - $' + totalProducto.toLocaleString()
+
+    let botonEliminar = document.createElement('button')
+    botonEliminar.textContent = ' X'
+    botonEliminar.addEventListener('click', function () {
+      if (producto.cantidad > 1) {
+        producto.cantidad = producto.cantidad - 1
+      } else {
+        carrito.splice(i, 1)
+      }
+      actualizarCarrito()
+    })
+
+    item.appendChild(botonEliminar)
     listaCarrito.appendChild(item)
   }
 }
