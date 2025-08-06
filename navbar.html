@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Deportiva - Menú Lateral</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/estilasobarras.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="/images/log.png" alt="persona nadando">
+                <h2>SwimiZone</h2>
+            </div>
+        </div>
+        <div class="sidebar-menu">
+            <div class="menu-section">
+                <h3>Categorías</h3>
+                <a href="#bienvenida" class="menu-item active">
+                    <i class="fas fa-home"></i>
+                    <span>Bienvenida</span>
+                </a>
+                <a href="#destacados" class="menu-item">
+                    <i class="fas fa-running"></i>
+                    <span>Destacados</span>
+                </a>
+                <a href="#ubicacion" class="menu-item">
+                    <i class="fas fa-shoe-prints"></i>
+                    <span>Nuestra Ubicacion</span>
+                </a>
+                <a href="#quienes-somos" class="menu-item">
+                    <i class="fas fa-dumbbell"></i>
+                    <span>Quienes somos</span>
+                </a>
+                <a href="#contactanos" class="menu-item">
+                    <i class="fas fa-bicycle"></i>
+                    <span>Contactanos</span>
+                </a>
+            </div>
+            <div class="menu-section">
+                <h3>Mi Cuenta</h3>
+                <a href="#" class="menu-item">
+                    <i class="fas fa-user"></i>
+                    <span>Perfil</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Carrito</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fas fa-heart"></i>
+                    <span>Favoritos</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fas fa-history"></i>
+                    <span>Historial</span>
+                </a>
+            </div>
+        </div>
+        <div class="sidebar-tab" id="sidebarToggle">&#9776;</div>
+    </aside>    
+
+    <aside class="cart-sidebar">
+        <div class="cart-handle">
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+        <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </div>
+        <div class="cart-content">
+            <h3>Tu Carrito</h3>
+            <div class="cart-items">
+                <div class="empty-cart">
+                    <p>Tu carrito está vacío</p>
+                </div>
+            </div>
+            <div class="cart-total">
+                <p>Total: <span>$0</span></p>
+                <button class="btn checkout-btn">Comprar</button>
+            </div>
+        </div>
+    </aside>
+    
+    <section id="bienvenida"> ... </section>
+    <section id="destacados"> ... </section>
+    <section id="ubicacion"> ... </section>
+    <section id="quienes-somos"> ... </section>
+    <section id="contactanos"> ... </section>
+
+    <script src="/assets/js/menu.js"></script>
+</body>
+</html>
